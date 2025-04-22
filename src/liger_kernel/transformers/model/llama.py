@@ -223,6 +223,7 @@ def lce_forward(
     loss = None
     # if in training mode, don't materialize logits
     if self.training and (labels is not None):
+        print('TEST LIGER', self)
         loss = lce_maybe_trainable_lm_head(
             self,
             hidden_states=hidden_states,
